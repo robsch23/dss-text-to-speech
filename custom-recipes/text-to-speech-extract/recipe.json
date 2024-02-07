@@ -1,6 +1,6 @@
 {
     "meta": {
-        "label": "Named Entity Recognition",
+        "label": "Text to speech extract",
         "description": "Identify “real-world objects” (i.e. People names, Dates, Places, etc) in a text column",
         "icon": "icon-tag"
     },
