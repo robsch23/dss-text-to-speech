@@ -11,7 +11,7 @@
         {
             "name": "input_dataset",
             "label": "Input dataset",
-            "description": "Dataset containing the text data to analyze",
+            "description": "Dataset containing the text data to convert",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true,
@@ -20,9 +20,9 @@
     ],
     "outputRoles": [
         {
-            "name": "output_dataset",
-            "label": "Output dataset",
-            "description": "Dataset with the input text and the corresponding entities",
+            "name": "output_folder",
+            "label": "Output folder",
+            "description": "Folder with audio mp3 take by text",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": false,
@@ -46,135 +46,24 @@
             ]
         },
         {
-            "visibilityCondition": "model.ner_model=='spacy'",
-            "name": "text_language_spacy",
-            "label": "Language",
-            "description": "List of supported languages",
-            "type": "SELECT",
-            "wt1Loggable": true,
-            "selectChoices": [
-                {
-                    "value": "zh",
-                    "label": "Chinese"
-                },
-                {
-                    "value": "en",
-                    "label": "English"
-                },
-                {
-                    "value": "fr",
-                    "label": "French"
-                },
-                {
-                    "value": "de",
-                    "label": "German"
-                },
-                {
-                    "value": "ja",
-                    "label": "Japanese"
-                },
-                {
-                    "value": "nb",
-                    "label": "Norwegian Bokmål"
-                },
-                {
-                    "value": "pl",
-                    "label": "Polish"
-                },
-                {
-                    "value": "es",
-                    "label": "Spanish"
-                }
-            ],
-            "defaultValue": "en"
+            "name": "text_column_name",
+            "label": "Text column",
+            "type": "COLUMN",
+            "mandatory": true,
+            "columnRole": "input_dataset",
+            "allowedColumnTypes": [
+                "string"
+            ]
         },
         {
-            "visibilityCondition": "model.ner_model=='flair'",
-            "name": "text_language_flair",
-            "label": "Language",
-            "type": "SELECT",
-            "wt1Loggable": true,
-            "description": "List of different models",
-            "getChoicesFromPython": true,
-            "defaultValue": "en"
-        },
-        {
-            "name": "separator_configuration",
-            "label": "Configuration",
-            "type": "SEPARATOR"
-        },
-        {
-            "name": "advanced_settings",
-            "label": "Expert mode",
-            "type": "BOOLEAN",
-            "defaultValue": false
-        },
-        {
-            "visibilityCondition": "model.advanced_settings",
-            "name": "ner_model",
-            "label": "Model",
-            "type": "SELECT",
-            "wt1Loggable": true,
-            "description": "spaCy (faster) or Flair (slower)",
-            "selectChoices": [
-                {
-                    "value": "spacy",
-                    "label": "spaCy"
-                },
-                {
-                    "value": "flair",
-                    "label": "Flair"
-                }
-            ],
-            "defaultValue": "spacy"
-        },
-        {
-            "visibilityCondition": "model.advanced_settings",
-            "name": "output_single_json",
-            "label": "JSON output",
-            "type": "BOOLEAN",
-            "wt1Loggable": true,
-            "description": "Output a single JSON column rather than one column per entity type",
-            "defaultValue": false
-        },
-        {
-            "visibilityCondition": "model.output_single_json",
-            "name": "output_json_format",
-            "label": "JSON format",
-            "type": "SELECT",
-            "wt1Loggable": true,
-            "description": "Format used for the json output column",
-            "selectChoices": [
-                {
-                    "value": "standard",
-                    "label": "Standard"
-                },
-                {
-                    "value": "labeling",
-                    "label": "Labeling"
-                }
-            ],
-            "defaultValue": "standard"
-        },
-        {
-            "visibilityCondition": "model.ner_model=='flair' && model.advanced_settings",
-            "name": "flair_device",
-            "label": "Processing",
-            "type": "SELECT",
-            "wt1Loggable": true,
-            "description": "CPU/GPU",
-            "selectChoices": [
-                {
-                    "value": "cpu",
-                    "label": "CPU"
-                },
-                {
-                    "value": "cuda",
-                    "label": "CUDA"
-                }
-
-            ],
-            "defaultValue": "cpu"
+          "name": "output_files_type",
+          "label": "Output files type",
+          "type": "SELECT",
+          "selectChoices" : [
+              { "value": "mp3", "label": "MP3"},
+              { "value": "mav", "label": "MAV"}
+          ],
+          "mandatory": true
         }
     ]
 }
