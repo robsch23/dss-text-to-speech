@@ -1,10 +1,10 @@
 {
     "meta": {
         "label": "Text to speech extract",
-        "description": "Identify “real-world objects” (i.e. People names, Dates, Places, etc) in a text column",
+        "description": "Apply text to speech tecnology to one column of input dataset, column type must be text",
         "icon": "icon-tag"
     },
-    "paramsPythonSetup": "compute_dynamic_select.py", # TODO
+    "paramsPythonSetup": "compute_dynamic_select.py",
     "kind": "PYTHON",
     "selectableFromDataset": "input_dataset",
     "inputRoles": [
@@ -14,7 +14,8 @@
             "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
-            "acceptsDataset": true
+            "acceptsDataset": true,
+            "acceptsManagedFolder": false
         }
     ],
     "outputRoles": [
@@ -24,7 +25,8 @@
             "description": "Dataset with the input text and the corresponding entities",
             "arity": "UNARY",
             "required": true,
-            "acceptsDataset": true
+            "acceptsDataset": false,
+            "acceptsManagedFolder": true
         }
     ],
     "params": [
