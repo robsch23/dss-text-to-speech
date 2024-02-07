@@ -11,7 +11,7 @@
         {
             "name": "input_dataset",
             "label": "Input dataset",
-            "description": "Dataset containng the text data to analyze",
+            "description": "Dataset containing the text data to analyze",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": true
