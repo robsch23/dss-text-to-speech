@@ -3,7 +3,8 @@
 
     "version": "0.0.1",
 
-    "meta": {
+    "meta": 
+    {
         "label": "Text to speech",
 
         "description": "Plugin for text-to-speech task",
