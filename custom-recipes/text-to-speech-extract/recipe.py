@@ -21,4 +21,4 @@ list_text = df[text_column_name].to_list()
 
 for text in list_text:
     tts = gTTS(text)
-    tts.save(os.path.join(output_folder, f'filename.{str(output_files_type)}'))
+    tts.save(os.path.join(output_folder, f'{str(text)[:15]}.{str(output_files_type)}'))

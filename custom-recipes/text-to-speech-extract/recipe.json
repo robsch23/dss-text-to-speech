@@ -46,16 +46,6 @@
             ]
         },
         {
-            "name": "text_column_name",
-            "label": "Text column",
-            "type": "COLUMN",
-            "mandatory": true,
-            "columnRole": "input_dataset",
-            "allowedColumnTypes": [
-                "string"
-            ]
-        },
-        {
           "name": "output_files_type",
           "label": "Output files type",
           "type": "SELECT",
