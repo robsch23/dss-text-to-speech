@@ -5,7 +5,7 @@ import os
 # get_recipe_config restituisce un dizionario con le chiave corrispondenti ai params definiti in recipe.json
 
 # To retrieve the datasets of an input role named 'input_A' as an array of dataset names:
-dataset_name = get_input_names_for_role('dataset_input')[0]
+dataset_name = get_input_names_for_role('input_dataset')[0]
 
 # For outputs, the process is the same:
 output_name = get_output_names_for_role('output_folder')[0]
