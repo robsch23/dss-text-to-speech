@@ -1,11 +1,16 @@
-# Named Entity Recognition Plugin
+# Text to speech (DataIku plugin)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/dataiku/dss-plugin-nlp-named-entity-recognition) ![Build status](https://img.shields.io/badge/build-passing-brightgreen) ![Support level](https://img.shields.io/badge/support-Unsupported-orange)
+![Static Badge](https://img.shields.io/badge/developer-Roberto_Schiavelli-re?style=plastic)
+![Static Badge](https://img.shields.io/badge/version-0.0.1-blue?style=plastic)
+![Static Badge](https://img.shields.io/badge/support-NOT_SUPPORTED-red?style=plastic)
+![Static Badge](https://img.shields.io/badge/license-Apache_License_version_2.0-yellow?style=plastic)
 
-This Dataiku DSS plugin provides a recipe, macro and webapp to recognize Named Entities (people, dates, places, etc.) in text data.
 
-Documentation: https://www.dataiku.com/product/plugins/named-entity-recognition/
+## Overview
+This Dataiku DSS plugin provides a recipe, macro and webapp to convert text in audio file.
+
+## How to use
+how to use...
 
 ## License
-
 This plugin is distributed under Apache License version 2.0.

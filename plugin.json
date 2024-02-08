@@ -7,15 +7,15 @@
     {
         "label": "Text to speech",
 
-        "description": "Plugin for text-to-speech task",
+        "description": "Plugin for text-to-speech task.\nRead README file like documentation at this url: https://github.com/robsch23/dss-text-to-speech",
 
         "author": "Roberto Schiavelli",
 
         "icon": "icon-puzzle-piece",
 
-        "tags": [Text-to-speech, NLP],
+        "tags": [Text-to-speech, NLP, Audio],
 
-        "url": "",
+        "url": "https://github.com/robsch23/dss-text-to-speech",
 
         "licenseInfo": "Apache Software License"
     }
