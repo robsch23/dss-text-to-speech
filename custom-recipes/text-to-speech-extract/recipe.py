@@ -20,5 +20,5 @@ df = dataiku.Dataset(dataset_name).get_dataframe()
 list_text = df[text_column_name].to_list()
 
 for text in list_text:
-    tts = gTTS(text, lang='it', slow=True)
+    tts = gTTS(text, lang='it', tld='es', slow=True)
     tts.save(os.path.join(output_folder, f'{str(text)[:15]}.{str(output_files_type)}'))
