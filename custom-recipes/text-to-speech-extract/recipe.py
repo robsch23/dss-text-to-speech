@@ -21,5 +21,5 @@ lang, tld = language_and_tld_params.split('-')[0], language_and_tld_params.split
 list_text = df[text_column_name].to_list()
 
 for text in list_text:
-    tts = gTTS(text, lang='it', tld='es', slow=True)
+    tts = gTTS(text, lang=lang, tld=tld, slow=True)
     tts.save(os.path.join(output_folder, f'{str(text)[:15]}.{str(output_files_type)}'))
