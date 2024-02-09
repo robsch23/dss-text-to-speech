@@ -66,6 +66,12 @@
               { "value": "wav", "label": "WAV"}
           ],
           "mandatory": true
+        },
+        {
+          "type": "BOOLEAN",
+          "name": "slow_param",
+          "label": "Slow voice reproduction",
+          "defaultValue": false
         }
     ]
 }

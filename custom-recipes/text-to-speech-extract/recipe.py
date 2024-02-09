@@ -15,11 +15,12 @@ output_folder = dataiku.Folder(output_name).get_info().get('path')
 text_column_name = get_recipe_config().get('text_column_name')
 output_files_type = get_recipe_config().get('output_files_type')
 language_and_tld_params = get_recipe_config().get('language')
+slow = get_recipe_config().get('slow_param')
 
 lang, tld = language_and_tld_params.split('-')[0], language_and_tld_params.split('-')[1]
 
 list_text = df[text_column_name].to_list()
 
 for text in list_text:
-    tts = gTTS(text, lang=lang, tld=tld, slow=True)
+    tts = gTTS(text, lang=lang, tld=tld, slow=slow)
     tts.save(os.path.join(output_folder, f'{str(text)[:15]}.{str(output_files_type)}'))
