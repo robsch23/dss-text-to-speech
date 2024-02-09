@@ -46,6 +46,18 @@
             ]
         },
         {
+            "name": "language",
+            "label": "Language",
+            "type": "SELECT",
+            "mandatory": true,
+            "selectChoices" : [
+              { "value": "en-co.uk", "label": "English"},
+              { "value": "it-es", "label": "Italian"},
+              { "value": "fr-fr", "label": "French"},
+              { "value": "es-es", "label": "Spanish"}
+            ]
+        },
+        {
           "name": "output_files_type",
           "label": "Output files type",
           "type": "SELECT",

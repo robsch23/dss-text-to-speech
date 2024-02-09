@@ -14,6 +14,9 @@ output_folder = dataiku.Folder(output_name).get_info().get('path')
 
 text_column_name = get_recipe_config().get('text_column_name')
 output_files_type = get_recipe_config().get('output_files_type')
+language_and_tld_params = get_recipe_config().get('language')
+
+lang, tld = language_and_tld_params.split('-')[0], language_and_tld_params.split('-')[1]
 
 list_text = df[text_column_name].to_list()
 
