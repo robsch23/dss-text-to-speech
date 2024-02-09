@@ -51,7 +51,7 @@
           "type": "SELECT",
           "selectChoices" : [
               { "value": "mp3", "label": "MP3"},
-              { "value": "mav", "label": "MAV"}
+              { "value": "wav", "label": "WAV"}
           ],
           "mandatory": true
         }
