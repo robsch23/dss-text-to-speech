@@ -2,7 +2,7 @@
     "meta": {
         "label": "Text to speech extract",
         "description": "Apply text to speech tecnology to one column of input dataset, column type must be string.",
-        "icon": "icon-tag"
+        "icon": "icon-volume-up"
     },
     "paramsPythonSetup": "compute_dynamic_select.py",
     "kind": "PYTHON",
