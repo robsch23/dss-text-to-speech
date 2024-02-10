@@ -1,7 +1,7 @@
 {
     "meta": {
         "label": "Text to speech extract",
-        "description": "Apply text to speech tecnology to one column of input dataset, column type must be text",
+        "description": "Apply text to speech tecnology to one column of input dataset, column type must be string.",
         "icon": "icon-tag"
     },
     "paramsPythonSetup": "compute_dynamic_select.py",
@@ -32,7 +32,7 @@
     "params": [
         {
             "name": "separator_input",
-            "label": "Input parameters",
+            "label": "Settings",
             "type": "SEPARATOR"
         },
         {
